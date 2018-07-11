@@ -1,6 +1,7 @@
 import { SET_TYPING_VALUE, SEND_MESSAGE } from "../constants/action-types";
 
 export default function typing(state = "", action) {
+  // console.log(action, 'typing action')
   switch (action.type) {
     case SET_TYPING_VALUE:
       return action.payload;

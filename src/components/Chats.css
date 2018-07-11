@@ -17,12 +17,41 @@
   border-bottom-right-radius: 10px;
 }
 .Chat.is-user-msg {
+  position:relative;
   margin-left: auto;
   background: #2b2c33;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+
+.Chat.is-user-msg:hover .btn-del-msg {
+  display: block;
+}
+
+.Chat.is-user-edited:after {
+  content: '(edited)';
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 13px;
+  font-style: italic;
+  color: #ddd;
+}
+
+.Chat.is-user-msg .btn-del-msg {
+  display: none;
+  top: -5px;
+  left: -5px;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  line-height: 6px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  padding: 3px;
+  font-size: 12px;
+  cursor: pointer;
 }
 
 @media (min-width: 576px) {
